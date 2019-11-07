@@ -1,5 +1,11 @@
-const server = require('./api/server.js');
+const server = require("./api/server.js");
 
-server.listen(4000, () => {
-  console.log('\n*** Server Running on http://localhost:4000 ***\n');
+// const { port } = process.env;
+
+console.log(process.env.USER);
+console.log(process.env.PORT);
+const PORT = process.env.PORT || 4444;
+
+server.listen(PORT, () => {
+  console.log(`\n*** Server Running on http://localhost:${PORT} ***\n`);
 });
